@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-form">
+        <h2>Login to Access Your Journal</h2>
+        <input type="password" id="password" placeholder="Enter password" />
+        <button onclick="checkPassword()">Login</button>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+
+    <div id="journal-container" style="display: none;">
+        <h1>Hey, dreamer! Ready to dive into your world? </h1>
+        <button onclick="logout()">Logout</button>
+        <div id="entry-form">
+            <h2>Write your story, one day at a time. 📖✨</h2>
+            <textarea id="entry-text" placeholder="Let’s continue your story...."></textarea>
+            <br />
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="Personal">Personal</option>
+                <option value="Goals and Achievements">Goals and Achievements</option>
+                <option value="Health and Wellness">Health and Wellness</option>
+                <option value="Reminders and Notifications">Reminders and Notifications</option>
+                <option value="Dreams and Aspirations">Dreams and Aspirations</option>
+            </select>
+            <button onclick="saveEntry()">Save Entry</button>
+        </div>
+        
+        <h3>Entries</h3>
+        <div id="entries-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
